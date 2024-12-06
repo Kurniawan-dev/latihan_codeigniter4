@@ -19,7 +19,7 @@
                     <a class="nav-link" href="<?= base_url('admin/setting') ?>">Setting</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('auth/logout') ?>">Logout</a>
+                    <a class="nav-link" href="<?php echo base_url('logout');?>">Logout</a>
                 </li>
             </ul>
         </div>

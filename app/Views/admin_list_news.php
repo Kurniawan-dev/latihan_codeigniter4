@@ -2,6 +2,10 @@
 
 <?= $this->section('content') ?>
 
+<section class="jumbotron text-center">
+    <h1>Welcome, <?= session()->username ?></h1>
+</section>
+
 <table class="table">
     <thead>
         <tr>

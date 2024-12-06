@@ -7,9 +7,22 @@ class NewsAdmin extends BaseController
 {
 	public function index()
 	{
+        if (! $this->isLoggedIn()) {
+            return redirect()->to('/login');
+        }
+
         $news = new NewsModel();
         $data['newses'] = $news->findAll();
 		echo view('admin_list_news', $data);
+    }
+
+    private function isLoggedIn() : bool
+    {
+        if (session()->get('logged_in')) {
+            return true;
+        }
+
+        return false;
     }
 
     //--------------------------------------------------------------------------
